@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0793D19928089E3C00B4CDDB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D19828089E3C00B4CDDB /* AppState.swift */; };
+		0793D19B2809AF9400B4CDDB /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D19A2809AF9400B4CDDB /* Array+Extension.swift */; };
+		0793D19D2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D19C2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift */; };
+		0793D1A42809F3F100B4CDDB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D1A32809F3F100B4CDDB /* SettingsViewController.swift */; };
+		0B864E47E5A49D8560E5829D /* Pods_BlockSortTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B054C5C6C0103C6629AD7A /* Pods_BlockSortTests.framework */; };
 		1E7820D4280313DA001F0129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7820D3280313DA001F0129 /* AppDelegate.swift */; };
-		1E7820D8280313DA001F0129 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7820D7280313DA001F0129 /* GameViewController.swift */; };
 		1E7820DD280313E5001F0129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7820DC280313E5001F0129 /* Assets.xcassets */; };
 		1E7820E0280313E5001F0129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7820DE280313E5001F0129 /* LaunchScreen.storyboard */; };
 		1E7820EA280313E5001F0129 /* BlockSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7820E9280313E5001F0129 /* BlockSortTests.swift */; };
@@ -21,6 +25,8 @@
 		1E78210C2803181A001F0129 /* BlockColumnPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78210B2803181A001F0129 /* BlockColumnPool.swift */; };
 		1E78211028031897001F0129 /* BoxSortPuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78210F28031897001F0129 /* BoxSortPuzzleView.swift */; };
 		1EEA1EE2280597A1004F7965 /* putSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1EEA1EE1280597A1004F7965 /* putSound.mp3 */; };
+		981DD3D84AFA5D5E003666FA /* Pods_BlockSort_BlockSortUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD5A2FBF20E94F7BE0C53A7 /* Pods_BlockSort_BlockSortUITests.framework */; };
+		F4938422FAAB99B916A550C8 /* Pods_BlockSort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A132E14A67E6C20483D80 /* Pods_BlockSort.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E7820D0280313DA001F0129 /* Bloc Sort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bloc Sort.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0793D19828089E3C00B4CDDB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		0793D19A2809AF9400B4CDDB /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		0793D19C2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockColumnPoolConfiguration.swift; sourceTree = "<group>"; };
+		0793D19E2809CF9000B4CDDB /* BlockSort.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlockSort.entitlements; sourceTree = "<group>"; };
+		0793D19F2809E9D800B4CDDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0793D1A32809F3F100B4CDDB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0C1A132E14A67E6C20483D80 /* Pods_BlockSort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockSort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E0189461CD1EAE5EE4701B2 /* Pods-BlockSort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockSort.release.xcconfig"; path = "Target Support Files/Pods-BlockSort/Pods-BlockSort.release.xcconfig"; sourceTree = "<group>"; };
+		1E7820D0280313DA001F0129 /* Block Sort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Block Sort.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7820D3280313DA001F0129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E7820D7280313DA001F0129 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1E7820DC280313E5001F0129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7820DF280313E5001F0129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E7820E5280313E5001F0129 /* BlockSortTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockSortTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +71,13 @@
 		1E78210B2803181A001F0129 /* BlockColumnPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockColumnPool.swift; sourceTree = "<group>"; };
 		1E78210F28031897001F0129 /* BoxSortPuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxSortPuzzleView.swift; sourceTree = "<group>"; };
 		1EEA1EE1280597A1004F7965 /* putSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = putSound.mp3; sourceTree = "<group>"; };
+		486BC1CCEFBAA26741C67227 /* Pods-BlockSort-BlockSortUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockSort-BlockSortUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlockSort-BlockSortUITests/Pods-BlockSort-BlockSortUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AD5A2FBF20E94F7BE0C53A7 /* Pods_BlockSort_BlockSortUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockSort_BlockSortUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B94C2483CDFB23DDB33403C /* Pods-BlockSortTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockSortTests.release.xcconfig"; path = "Target Support Files/Pods-BlockSortTests/Pods-BlockSortTests.release.xcconfig"; sourceTree = "<group>"; };
+		78B054C5C6C0103C6629AD7A /* Pods_BlockSortTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockSortTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DB33027FCDE12A4BECB51A2 /* Pods-BlockSortTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockSortTests.debug.xcconfig"; path = "Target Support Files/Pods-BlockSortTests/Pods-BlockSortTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0B4D74EC21F7E447A15C7D7 /* Pods-BlockSort.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockSort.debug.xcconfig"; path = "Target Support Files/Pods-BlockSort/Pods-BlockSort.debug.xcconfig"; sourceTree = "<group>"; };
+		D6B6E4AD2402710056C34E78 /* Pods-BlockSort-BlockSortUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockSort-BlockSortUITests.release.xcconfig"; path = "Target Support Files/Pods-BlockSort-BlockSortUITests/Pods-BlockSort-BlockSortUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4938422FAAB99B916A550C8 /* Pods_BlockSort.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B864E47E5A49D8560E5829D /* Pods_BlockSortTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +101,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				981DD3D84AFA5D5E003666FA /* Pods_BlockSort_BlockSortUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0793D1A12809F3D000B4CDDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E7820DC280313E5001F0129 /* Assets.xcassets */,
+				1EEA1EE1280597A1004F7965 /* putSound.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0793D1A22809F3E000B4CDDB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0793D1A32809F3F100B4CDDB /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		1E7820C7280313D9001F0129 = {
 			isa = PBXGroup;
 			children = (
@@ -92,13 +132,15 @@
 				1E7820E8280313E5001F0129 /* BlockSortTests */,
 				1E7820F2280313E5001F0129 /* BlockSortUITests */,
 				1E7820D1280313DA001F0129 /* Products */,
+				79FF942E4D32C62E8A81F755 /* Pods */,
+				48E522235AC3DEE975CB844D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		1E7820D1280313DA001F0129 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E7820D0280313DA001F0129 /* Bloc Sort.app */,
+				1E7820D0280313DA001F0129 /* Block Sort.app */,
 				1E7820E5280313E5001F0129 /* BlockSortTests.xctest */,
 				1E7820EF280313E5001F0129 /* BlockSortUITests.xctest */,
 			);
@@ -108,11 +150,11 @@
 		1E7820D2280313DA001F0129 /* BlockSort */ = {
 			isa = PBXGroup;
 			children = (
-				1EEA1EE1280597A1004F7965 /* putSound.mp3 */,
+				0793D19E2809CF9000B4CDDB /* BlockSort.entitlements */,
+				0793D1A22809F3E000B4CDDB /* Settings */,
+				0793D1A12809F3D000B4CDDB /* Resources */,
 				1E78210E28031861001F0129 /* Application */,
 				1E78210D2803184E001F0129 /* SceneLogic */,
-				1E7820DC280313E5001F0129 /* Assets.xcassets */,
-				1E78210F28031897001F0129 /* BoxSortPuzzleView.swift */,
 			);
 			path = BlockSort;
 			sourceTree = "<group>";
@@ -141,6 +183,8 @@
 				1E782106280316A7001F0129 /* BlockColumn.swift */,
 				1E782108280316FC001F0129 /* SCNMaterial+Extension.swift */,
 				1E78210B2803181A001F0129 /* BlockColumnPool.swift */,
+				0793D19A2809AF9400B4CDDB /* Array+Extension.swift */,
+				0793D19C2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift */,
 			);
 			path = SceneLogic;
 			sourceTree = "<group>";
@@ -148,12 +192,37 @@
 		1E78210E28031861001F0129 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				1E78210F28031897001F0129 /* BoxSortPuzzleView.swift */,
 				1E7821022803164C001F0129 /* BoxSortPuzzleViewController.swift */,
 				1E7820DE280313E5001F0129 /* LaunchScreen.storyboard */,
-				1E7820D7280313DA001F0129 /* GameViewController.swift */,
 				1E7820D3280313DA001F0129 /* AppDelegate.swift */,
+				0793D19828089E3C00B4CDDB /* AppState.swift */,
+				0793D19F2809E9D800B4CDDB /* Info.plist */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		48E522235AC3DEE975CB844D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C1A132E14A67E6C20483D80 /* Pods_BlockSort.framework */,
+				4AD5A2FBF20E94F7BE0C53A7 /* Pods_BlockSort_BlockSortUITests.framework */,
+				78B054C5C6C0103C6629AD7A /* Pods_BlockSortTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79FF942E4D32C62E8A81F755 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0B4D74EC21F7E447A15C7D7 /* Pods-BlockSort.debug.xcconfig */,
+				0E0189461CD1EAE5EE4701B2 /* Pods-BlockSort.release.xcconfig */,
+				486BC1CCEFBAA26741C67227 /* Pods-BlockSort-BlockSortUITests.debug.xcconfig */,
+				D6B6E4AD2402710056C34E78 /* Pods-BlockSort-BlockSortUITests.release.xcconfig */,
+				9DB33027FCDE12A4BECB51A2 /* Pods-BlockSortTests.debug.xcconfig */,
+				5B94C2483CDFB23DDB33403C /* Pods-BlockSortTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E7820F9280313E5001F0129 /* Build configuration list for PBXNativeTarget "BlockSort" */;
 			buildPhases = (
+				2FECC6B8B197E2623EC6476B /* [CP] Check Pods Manifest.lock */,
 				1E7820CC280313DA001F0129 /* Sources */,
 				1E7820CD280313DA001F0129 /* Frameworks */,
 				1E7820CE280313DA001F0129 /* Resources */,
+				ADE9A4D92F326182A4539245 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,13 +244,14 @@
 			);
 			name = BlockSort;
 			productName = BlockSort;
-			productReference = 1E7820D0280313DA001F0129 /* Bloc Sort.app */;
+			productReference = 1E7820D0280313DA001F0129 /* Block Sort.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1E7820E4280313E5001F0129 /* BlockSortTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E7820FC280313E5001F0129 /* Build configuration list for PBXNativeTarget "BlockSortTests" */;
 			buildPhases = (
+				6085F9A235A24DEB41383146 /* [CP] Check Pods Manifest.lock */,
 				1E7820E1280313E5001F0129 /* Sources */,
 				1E7820E2280313E5001F0129 /* Frameworks */,
 				1E7820E3280313E5001F0129 /* Resources */,
@@ -198,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E7820FF280313E5001F0129 /* Build configuration list for PBXNativeTarget "BlockSortUITests" */;
 			buildPhases = (
+				3AF1181E34B44B7CD36384F7 /* [CP] Check Pods Manifest.lock */,
 				1E7820EB280313E5001F0129 /* Sources */,
 				1E7820EC280313E5001F0129 /* Frameworks */,
 				1E7820ED280313E5001F0129 /* Resources */,
+				F8879AAF032A720A587C9F08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,19 +356,125 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2FECC6B8B197E2623EC6476B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockSort-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AF1181E34B44B7CD36384F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockSort-BlockSortUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6085F9A235A24DEB41383146 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockSortTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADE9A4D92F326182A4539245 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockSort/Pods-BlockSort-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockSort/Pods-BlockSort-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlockSort/Pods-BlockSort-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8879AAF032A720A587C9F08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockSort-BlockSortUITests/Pods-BlockSort-BlockSortUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockSort-BlockSortUITests/Pods-BlockSort-BlockSortUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlockSort-BlockSortUITests/Pods-BlockSort-BlockSortUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1E7820CC280313DA001F0129 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1E7821032803164C001F0129 /* BoxSortPuzzleViewController.swift in Sources */,
+				0793D19B2809AF9400B4CDDB /* Array+Extension.swift in Sources */,
 				1E78210528031682001F0129 /* Block.swift in Sources */,
-				1E7820D8280313DA001F0129 /* GameViewController.swift in Sources */,
+				0793D19D2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift in Sources */,
+				0793D19928089E3C00B4CDDB /* AppState.swift in Sources */,
 				1E782107280316A7001F0129 /* BlockColumn.swift in Sources */,
 				1E78211028031897001F0129 /* BoxSortPuzzleView.swift in Sources */,
 				1E7820D4280313DA001F0129 /* AppDelegate.swift in Sources */,
 				1E782109280316FC001F0129 /* SCNMaterial+Extension.swift in Sources */,
 				1E78210C2803181A001F0129 /* BlockColumnPool.swift in Sources */,
+				0793D1A42809F3F100B4CDDB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,13 +638,17 @@
 		};
 		1E7820FA280313E5001F0129 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0B4D74EC21F7E447A15C7D7 /* Pods-BlockSort.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BlockSort/BlockSort.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4D5NR7NN6K;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = BlockSort/Application/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -477,7 +661,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "VladyslavB-UK.BlockSort";
-				PRODUCT_NAME = "Bloc Sort";
+				PRODUCT_NAME = "Block Sort";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,13 +671,17 @@
 		};
 		1E7820FB280313E5001F0129 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E0189461CD1EAE5EE4701B2 /* Pods-BlockSort.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BlockSort/BlockSort.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4D5NR7NN6K;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = BlockSort/Application/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -505,7 +694,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "VladyslavB-UK.BlockSort";
-				PRODUCT_NAME = "Bloc Sort";
+				PRODUCT_NAME = "Block Sort";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,6 +704,7 @@
 		};
 		1E7820FD280313E5001F0129 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DB33027FCDE12A4BECB51A2 /* Pods-BlockSortTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -534,6 +725,7 @@
 		};
 		1E7820FE280313E5001F0129 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B94C2483CDFB23DDB33403C /* Pods-BlockSortTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -554,6 +746,7 @@
 		};
 		1E782100280313E5001F0129 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 486BC1CCEFBAA26741C67227 /* Pods-BlockSort-BlockSortUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -572,6 +765,7 @@
 		};
 		1E782101280313E5001F0129 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6B6E4AD2402710056C34E78 /* Pods-BlockSort-BlockSortUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

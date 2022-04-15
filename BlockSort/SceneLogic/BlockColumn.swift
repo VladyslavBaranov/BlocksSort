@@ -4,25 +4,6 @@
 //
 //  Created by Vladyslav Baranov on 10.04.2022.
 //
-/*
- 1 - 3,2
- 2 - 3,2
- 3 - 3,1
- 4 - 3,2 -h
- 5 - 3,2 -h
- 
- 6 - 4,2
- 7 - 4,2
- 8 - 4,1
- 9 - 4,2 -h
- 10 - 4,1 -h
- 
- 11 - 5,2
- 12 - 5,2
- 13 - 5,1
- 14 - 5,2 -h
- 15 - 5,1 -h
- */
 
 import SceneKit
 
@@ -37,7 +18,9 @@ final class BlockStep {
 }
 
 final class BlockColumn {
-    static var maxLength = 4
+	
+	static var audioSource: SCNAudioSource!
+    static var maxLength = 3
     
     var id = "ID-0"
     
@@ -111,9 +94,9 @@ final class BlockColumn {
             block.isSelected = false
             switchMaterialOnBaseNode(newMaterial: block.geometry?.firstMaterial, in: 600)
             
-            // DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(600)) {
-            //     block.runAction(.playAudio(putDownAudioSource, waitForCompletion: false))
-            // }
+			DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(600)) {
+				block.runAction(.playAudio(Self.audioSource, waitForCompletion: false))
+			}
             return step
         } else {
             if blocks.count == Self.maxLength {
@@ -132,9 +115,9 @@ final class BlockColumn {
             let vec = recompute()
             block.move(to: vec)
             block.isSelected = false
-            // DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(600)) {
-            //    block.runAction(.playAudio(putDownAudioSource, waitForCompletion: false))
-            // }
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(600)) {
+				block.runAction(.playAudio(Self.audioSource, waitForCompletion: false))
+            }
             return step
         }
     }
@@ -164,7 +147,10 @@ final class BlockColumn {
     func makeTopVisisble() {
         blocks.last?.isColorHidden = false
         if blocks.count == 1 {
+			SCNTransaction.begin()
+			SCNTransaction.animationDuration = 0.5
             baseNode.geometry?.firstMaterial?.diffuse.contents = blocks.last?.color ?? .black
+			SCNTransaction.commit()
         }
     }
     

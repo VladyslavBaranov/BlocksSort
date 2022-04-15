@@ -7,17 +7,29 @@
 
 import SceneKit
 
+protocol BlockColumnPoolDelegate: AnyObject {
+	func didSetLevel(_ level: Int)
+}
+
 final class BlockColumnPool {
+	
+	enum Mode {
+		case basic
+		case hidden
+	}
+	
+	unowned var delegate: BlockColumnPoolDelegate
 
     weak var putDownAudioSource: SCNAudioSource!
     weak var selectedBlock: Block!
     var pool: [BlockColumn] = []
     var playerSteps: [BlockStep] = []
+	
+	init(delegate: BlockColumnPoolDelegate) {
+		self.delegate = delegate
+	}
     
-    func touch(_ block: Block) {
-        
-        print("#", block.isLastInColumn(), block.column.id, block.positionInColumn)
-        
+	func touch(_ block: Block) {
         if selectedBlock != nil && selectedBlock.isSelected {
             if block === selectedBlock {
                 selectedBlock.unselect()
@@ -25,9 +37,9 @@ final class BlockColumnPool {
                 if let step = block.column.add(selectedBlock, putDownAudioSource: putDownAudioSource) {
                     playerSteps.append(step)
                 }
-                
             }
         } else {
+			guard block.isLastInColumn() else { return }
             selectedBlock = block
             
             let columnIsNotSelectable = selectedBlock.column.allAreSame() && selectedBlock.column.isFull
@@ -38,6 +50,12 @@ final class BlockColumnPool {
                 // print("#UNSELECT")
             }
         }
+		
+		let winState = checkWinState()
+		if winState {
+			AppState.shared.incrementLevel()
+			delegate.didSetLevel(AppState.shared.getLevel())
+		}
     }
     
     func undoLast() {
@@ -57,41 +75,43 @@ final class BlockColumnPool {
     }
     
     func touch(_ platform: ColumnBaseNode) {
-        
-        if let selectedBlock = selectedBlock {
-            if let step = platform.column.add(selectedBlock, putDownAudioSource: putDownAudioSource) {
-                playerSteps.append(step)
-            }
-            
-            let winState = checkWinState()
-            if winState {
-                print("!!!WON!!!")
-            }
-            // print("#IS WON: \(winState)")
-        }
+		
+		let winState = checkWinState()
+		if winState {
+			AppState.shared.incrementLevel()
+			delegate.didSetLevel(AppState.shared.getLevel())
+		} else {
+			if let selectedBlock = selectedBlock {
+				if platform.column.blocks.isEmpty {
+					if let step = platform.column.add(selectedBlock, putDownAudioSource: putDownAudioSource) {
+						playerSteps.append(step)
+					}
+				}
+			}
+		}
     }
     
     func checkWinState() -> Bool {
-        for column in pool {
-            if !column.allAreSame() {
-                return false
-            }
-        }
-        return true
+		let winState = pool.allSatisfy { column in
+			(column.isFull && column.allAreSame()) || column.blocks.count == 0
+		}
+		return winState
     }
     
-    static func createColorsSets() -> [[UIColor]] {
-        let colorSet: [UIColor] = [.orange, .lightGray, .blue, .purple, .red, .yellow]
+	static func createColorsSets(colorCount: Int) -> [[UIColor]] {
+		
+		let availableColors: [UIColor] = [.lightGray, .yellow, .green, .orange, .red, .blue, .purple, .magenta, .brown]
+		let colorSet: [UIColor] = availableColors.getFirst(colorCount)
         var input: [UIColor] = []
         for _ in 0..<BlockColumn.maxLength {
-            for i in 0..<colorSet.count {
+            for i in 0..<colorCount {
                 input.append(colorSet[i])
                 input.shuffle()
             }
         }
 
-        input.shuffle()
-        
+		input.shuffle()
+		
         var output: [[UIColor]] = []
         
         var index = 0
@@ -108,13 +128,18 @@ final class BlockColumnPool {
         return output
     }
     
-    static func createPool() -> BlockColumnPool {
-        let pool = BlockColumnPool()
+	static func createPool(
+		colorCount: Int,
+		emptyPlatformsCount: Int,
+		mode: Mode,
+		delegate: BlockColumnPoolDelegate
+	) -> BlockColumnPool {
+		let pool = BlockColumnPool(delegate: delegate)
         
         var globalXPosition: CGFloat = 0.0
         var globalZPosition: CGFloat = 0.0
         
-        let sets = Self.createColorsSets()
+		let sets = Self.createColorsSets(colorCount: colorCount)
         var columns: [BlockColumn] = []
         
         var index = 0
@@ -129,9 +154,11 @@ final class BlockColumnPool {
                 globalXPosition += 0.2
                 globalZPosition = 0
             }
-            column.setupHiddenMode()
+			if mode == .hidden {
+				column.setupHiddenMode()
+			}
         }
-        for _ in 0...1 {
+        for _ in 0..<emptyPlatformsCount {
             let emptyColumn = BlockColumn(colors: [])
             emptyColumn.id = "ID-\(index)"
             emptyColumn.setGlobalPosition(x: globalXPosition, z: globalZPosition)

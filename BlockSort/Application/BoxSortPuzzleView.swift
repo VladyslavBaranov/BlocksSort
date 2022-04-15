@@ -9,7 +9,7 @@ import SceneKit
 
 final class BoxSortPuzzleView: SCNView {
     
-    var pool: BlockColumnPool = BlockColumnPool.createPool()
+    var pool: BlockColumnPool!
     var puzzleScene: SCNScene!
     
     private func addBlockColumn(_ column: BlockColumn) {
@@ -26,10 +26,6 @@ final class BoxSortPuzzleView: SCNView {
         antialiasingMode = .multisampling2X
         puzzleScene.background.contents = UIColor(red: 0.12, green: 0.06, blue: 0.12, alpha: 1)
         scene = puzzleScene
-        
-        for column in pool.pool {
-            addBlockColumn(column)
-        }
     }
     
     required init?(coder: NSCoder) {
