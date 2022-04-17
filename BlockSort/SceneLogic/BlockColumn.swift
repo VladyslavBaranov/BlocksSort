@@ -94,8 +94,10 @@ final class BlockColumn {
             block.isSelected = false
             switchMaterialOnBaseNode(newMaterial: block.geometry?.firstMaterial, in: 600)
             
-			DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(600)) {
-				block.runAction(.playAudio(Self.audioSource, waitForCompletion: false))
+			if AppState.shared.soundsAreOn() {
+				DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(600)) {
+					block.runAction(.playAudio(Self.audioSource, waitForCompletion: false))
+				}
 			}
             return step
         } else {
@@ -115,9 +117,11 @@ final class BlockColumn {
             let vec = recompute()
             block.move(to: vec)
             block.isSelected = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(600)) {
-				block.runAction(.playAudio(Self.audioSource, waitForCompletion: false))
-            }
+			if AppState.shared.soundsAreOn() {
+				DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(600)) {
+					block.runAction(.playAudio(Self.audioSource, waitForCompletion: false))
+				}
+			}
             return step
         }
     }

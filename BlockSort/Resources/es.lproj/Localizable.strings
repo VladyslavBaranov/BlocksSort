@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  BlockSort
+
+  Created by VladyslavMac on 16.04.2022.
+  
+*/
+
+"main_level" = "Nivel";
+"main_watch_ad" = "Ver anuncio";
+
+"settings_on" = "Activado";
+"settings_off" = "Desactivado";
+"settings_restore" = "Restaurar";
+"settings_ads" = "Anuncios";
+"settings_sound" = "Sonido";
+"settings_share" = "Compartir con amigos";
+"settings_reset" = "Restablecer nivel";
+"settings_warning" = "Advertencia: perderá todo el progreso";
+"settings_pricing" = "Eliminar anuncios y recargas infinitas";
+"settings_confirm" = "Confirmar";

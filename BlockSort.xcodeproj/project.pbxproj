@@ -11,6 +11,12 @@
 		0793D19B2809AF9400B4CDDB /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D19A2809AF9400B4CDDB /* Array+Extension.swift */; };
 		0793D19D2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D19C2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift */; };
 		0793D1A42809F3F100B4CDDB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D1A32809F3F100B4CDDB /* SettingsViewController.swift */; };
+		0793D1A6280AC3FC00B4CDDB /* StoreObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D1A5280AC3FC00B4CDDB /* StoreObserver.swift */; };
+		0793D1A8280AC9F400B4CDDB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0793D1A7280AC9F400B4CDDB /* StoreKit.framework */; };
+		0793D1AB280B21F100B4CDDB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0793D1AD280B21F100B4CDDB /* Localizable.strings */; };
+		0793D1B0280B229E00B4CDDB /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D1AF280B229E00B4CDDB /* Localization.swift */; };
+		0793D1BE280B323F00B4CDDB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0793D1BD280B323F00B4CDDB /* GameKit.framework */; };
+		0793D1C0280B345300B4CDDB /* AdMobUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D1BF280B345300B4CDDB /* AdMobUnits.swift */; };
 		0B864E47E5A49D8560E5829D /* Pods_BlockSortTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B054C5C6C0103C6629AD7A /* Pods_BlockSortTests.framework */; };
 		1E7820D4280313DA001F0129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7820D3280313DA001F0129 /* AppDelegate.swift */; };
 		1E7820DD280313E5001F0129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7820DC280313E5001F0129 /* Assets.xcassets */; };
@@ -53,6 +59,25 @@
 		0793D19E2809CF9000B4CDDB /* BlockSort.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlockSort.entitlements; sourceTree = "<group>"; };
 		0793D19F2809E9D800B4CDDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0793D1A32809F3F100B4CDDB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0793D1A5280AC3FC00B4CDDB /* StoreObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreObserver.swift; sourceTree = "<group>"; };
+		0793D1A7280AC9F400B4CDDB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0793D1AC280B21F100B4CDDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1AE280B21FD00B4CDDB /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1AF280B229E00B4CDDB /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		0793D1B1280B27A400B4CDDB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1B2280B27FA00B4CDDB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0793D1B3280B282600B4CDDB /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1B4280B28D100B4CDDB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1B5280B291000B4CDDB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1B6280B2DA200B4CDDB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1B7280B2DEC00B4CDDB /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1B8280B2EAB00B4CDDB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1B9280B2F9400B4CDDB /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0793D1BA280B2FDD00B4CDDB /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1BB280B30A300B4CDDB /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1BC280B313A00B4CDDB /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0793D1BD280B323F00B4CDDB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		0793D1BF280B345300B4CDDB /* AdMobUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobUnits.swift; sourceTree = "<group>"; };
 		0C1A132E14A67E6C20483D80 /* Pods_BlockSort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockSort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0189461CD1EAE5EE4701B2 /* Pods-BlockSort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockSort.release.xcconfig"; path = "Target Support Files/Pods-BlockSort/Pods-BlockSort.release.xcconfig"; sourceTree = "<group>"; };
 		1E7820D0280313DA001F0129 /* Block Sort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Block Sort.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +110,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0793D1BE280B323F00B4CDDB /* GameKit.framework in Frameworks */,
 				F4938422FAAB99B916A550C8 /* Pods_BlockSort.framework in Frameworks */,
+				0793D1A8280AC9F400B4CDDB /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +140,9 @@
 			children = (
 				1E7820DC280313E5001F0129 /* Assets.xcassets */,
 				1EEA1EE1280597A1004F7965 /* putSound.mp3 */,
+				0793D1AD280B21F100B4CDDB /* Localizable.strings */,
+				0793D1AF280B229E00B4CDDB /* Localization.swift */,
+				0793D1BF280B345300B4CDDB /* AdMobUnits.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -121,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				0793D1A32809F3F100B4CDDB /* SettingsViewController.swift */,
+				0793D1A5280AC3FC00B4CDDB /* StoreObserver.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -205,6 +236,8 @@
 		48E522235AC3DEE975CB844D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0793D1BD280B323F00B4CDDB /* GameKit.framework */,
+				0793D1A7280AC9F400B4CDDB /* StoreKit.framework */,
 				0C1A132E14A67E6C20483D80 /* Pods_BlockSort.framework */,
 				4AD5A2FBF20E94F7BE0C53A7 /* Pods_BlockSort_BlockSortUITests.framework */,
 				78B054C5C6C0103C6629AD7A /* Pods_BlockSortTests.framework */,
@@ -316,6 +349,19 @@
 			knownRegions = (
 				en,
 				Base,
+				uk,
+				de,
+				"zh-Hans",
+				ar,
+				fr,
+				es,
+				tr,
+				pl,
+				ja,
+				"pt-PT",
+				it,
+				el,
+				cs,
 			);
 			mainGroup = 1E7820C7280313D9001F0129;
 			productRefGroup = 1E7820D1280313DA001F0129 /* Products */;
@@ -335,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7820E0280313E5001F0129 /* LaunchScreen.storyboard in Resources */,
+				0793D1AB280B21F100B4CDDB /* Localizable.strings in Resources */,
 				1E7820DD280313E5001F0129 /* Assets.xcassets in Resources */,
 				1EEA1EE2280597A1004F7965 /* putSound.mp3 in Resources */,
 			);
@@ -465,16 +512,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7821032803164C001F0129 /* BoxSortPuzzleViewController.swift in Sources */,
+				0793D1C0280B345300B4CDDB /* AdMobUnits.swift in Sources */,
 				0793D19B2809AF9400B4CDDB /* Array+Extension.swift in Sources */,
 				1E78210528031682001F0129 /* Block.swift in Sources */,
 				0793D19D2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift in Sources */,
 				0793D19928089E3C00B4CDDB /* AppState.swift in Sources */,
+				0793D1B0280B229E00B4CDDB /* Localization.swift in Sources */,
 				1E782107280316A7001F0129 /* BlockColumn.swift in Sources */,
 				1E78211028031897001F0129 /* BoxSortPuzzleView.swift in Sources */,
 				1E7820D4280313DA001F0129 /* AppDelegate.swift in Sources */,
 				1E782109280316FC001F0129 /* SCNMaterial+Extension.swift in Sources */,
 				1E78210C2803181A001F0129 /* BlockColumnPool.swift in Sources */,
 				0793D1A42809F3F100B4CDDB /* SettingsViewController.swift in Sources */,
+				0793D1A6280AC3FC00B4CDDB /* StoreObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +561,27 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0793D1AD280B21F100B4CDDB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0793D1AC280B21F100B4CDDB /* en */,
+				0793D1AE280B21FD00B4CDDB /* uk */,
+				0793D1B1280B27A400B4CDDB /* de */,
+				0793D1B2280B27FA00B4CDDB /* zh-Hans */,
+				0793D1B3280B282600B4CDDB /* ar */,
+				0793D1B4280B28D100B4CDDB /* fr */,
+				0793D1B5280B291000B4CDDB /* es */,
+				0793D1B6280B2DA200B4CDDB /* tr */,
+				0793D1B7280B2DEC00B4CDDB /* pl */,
+				0793D1B8280B2EAB00B4CDDB /* ja */,
+				0793D1B9280B2F9400B4CDDB /* pt-PT */,
+				0793D1BA280B2FDD00B4CDDB /* it */,
+				0793D1BB280B30A300B4CDDB /* el */,
+				0793D1BC280B313A00B4CDDB /* cs */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		1E7820DE280313E5001F0129 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -526,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -586,6 +658,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -662,7 +735,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "VladyslavB-UK.BlockSort";
 				PRODUCT_NAME = "Block Sort";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -695,7 +768,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "VladyslavB-UK.BlockSort";
 				PRODUCT_NAME = "Block Sort";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

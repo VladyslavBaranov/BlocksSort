@@ -6,6 +6,7 @@
 //
 
 import SceneKit
+import StoreKit
 
 protocol BlockColumnPoolDelegate: AnyObject {
 	func didSetLevel(_ level: Int)
@@ -36,6 +37,9 @@ final class BlockColumnPool {
             } else {
                 if let step = block.column.add(selectedBlock, putDownAudioSource: putDownAudioSource) {
                     playerSteps.append(step)
+					if playerSteps.count == 5 {
+						playerSteps.removeFirst()
+					}
                 }
             }
         } else {
@@ -45,14 +49,18 @@ final class BlockColumnPool {
             let columnIsNotSelectable = selectedBlock.column.allAreSame() && selectedBlock.column.isFull
             if selectedBlock.isLastInColumn() && !columnIsNotSelectable {
                 selectedBlock.select()
-                // print("#SELECT")
-            } else {
-                // print("#UNSELECT")
             }
         }
 		
 		let winState = checkWinState()
 		if winState {
+			
+			if AppState.shared.getLaunchCount() == 3 {
+				if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+					SKStoreReviewController.requestReview(in: scene)
+				}
+			}
+			
 			AppState.shared.incrementLevel()
 			delegate.didSetLevel(AppState.shared.getLevel())
 		}
@@ -64,7 +72,6 @@ final class BlockColumnPool {
         step.block.isSelected = false
         
         step.block.column.removeLast()
-        print(step.block.column.blocks.count)
         
         step.previousColumn.blocks.append(step.block)
 
@@ -78,6 +85,13 @@ final class BlockColumnPool {
 		
 		let winState = checkWinState()
 		if winState {
+			
+			if AppState.shared.getLaunchCount() == 3 {
+				if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+					SKStoreReviewController.requestReview(in: scene)
+				}
+			}
+			
 			AppState.shared.incrementLevel()
 			delegate.didSetLevel(AppState.shared.getLevel())
 		} else {
@@ -85,6 +99,9 @@ final class BlockColumnPool {
 				if platform.column.blocks.isEmpty {
 					if let step = platform.column.add(selectedBlock, putDownAudioSource: putDownAudioSource) {
 						playerSteps.append(step)
+						if playerSteps.count == 5 {
+							playerSteps.removeFirst()
+						}
 					}
 				}
 			}
@@ -166,8 +183,8 @@ final class BlockColumnPool {
             columns.append(emptyColumn)
             index += 1
             if index % 3 == 0 {
-                globalXPosition = 0
-                globalZPosition += 0.2
+				globalXPosition += 0.2
+                globalZPosition = 0.0
             }
         }
         pool.pool = columns

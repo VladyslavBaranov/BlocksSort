@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  BlockSort
+
+  Created by VladyslavMac on 16.04.2022.
+  
+*/
+
+"main_level" = "Επίπεδο";
+"main_watch_ad" = "Παρακολουθήστε τη διαφήμιση";
+
+"settings_on" = "Ενεργό";
+"settings_off" = "Απενεργοποιημένο";
+"settings_restore" = "Επαναφορά";
+"settings_ads" = "Διαφημίσεις";
+"settings_sound" = "Ήχος";
+"settings_share" = "Κοινή χρήση με φίλους";
+"settings_reset" = "Επαναφορά επιπέδου";
+"settings_warning" = "Προειδοποίηση: Θα χάσετε όλη την πρόοδο";
+"settings_pricing" = "Κατάργηση διαφημίσεων & Άπειρες επαναφορτώσεις";
+"settings_confirm" = "Επιβεβαίωση";

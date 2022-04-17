@@ -8,7 +8,7 @@
 import SceneKit
 
 final class BoxSortPuzzleView: SCNView {
-    
+
     var pool: BlockColumnPool!
     var puzzleScene: SCNScene!
     

@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  BlockSort
+
+  Created by VladyslavMac on 16.04.2022.
+  
+*/
+
+"main_level" = "レベル";
+"main_watch_ad" = "広告を見る";
+
+"settings_on" = "オン";
+"settings_off" = "オフ";
+"settings_restore" = "復元";
+"settings_ads" = "広告";
+"settings_sound" = "サウンド";
+"settings_share" = "友達と共有";
+"settings_reset" = "リセットレベル";
+"settings_warning" = "警告：すべての進行状況が失われます";
+"settings_pricing" = "広告の削除と無限のリロード";
+"settings_confirm" = "確認";

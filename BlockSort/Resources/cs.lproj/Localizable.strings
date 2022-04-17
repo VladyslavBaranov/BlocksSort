@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  BlockSort
+
+  Created by VladyslavMac on 16.04.2022.
+  
+*/
+
+"main_level" = "Úroveň";
+"main_watch_ad" = "Přehrát reklamu";
+
+"settings_on" = "Zapnuto";
+"settings_off" = "Vypnuto";
+"settings_restore" = "Obnovit";
+"settings_ads" = "Reklamy";
+"settings_sound" = "Zvuk";
+"settings_share" = "Sdílet s přáteli";
+"settings_reset" = "Resetovat úroveň";
+"settings_warning" = "Upozornění: Ztratíte veškerý postup";
+"settings_pricing" = "Odebrat reklamy a nekonečné načítání";
+"settings_confirm" = "Potvrdit";

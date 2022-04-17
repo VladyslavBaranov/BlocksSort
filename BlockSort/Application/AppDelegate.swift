@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 import GoogleMobileAds
 
 @main
@@ -17,8 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 		
-		GADMobileAds.sharedInstance().start(completionHandler: nil)
-        
+		AppState.shared.incrementLaunchCount()
+
+		SKPaymentQueue.default().add(StoreObserver.shared)
+		
+		if AppState.shared.adsAreOn() {
+			GADMobileAds.sharedInstance().start(completionHandler: nil)
+		}
+		
         window = UIWindow()
         let controller = BoxSortPuzzleViewController()
         window?.rootViewController = controller
@@ -44,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
-
+	func applicationWillTerminate(_ application: UIApplication) {
+		SKPaymentQueue.default().remove(StoreObserver.shared)
+	}
 }
 
