@@ -10,6 +10,7 @@ import StoreKit
 extension Notification.Name {
 	static let adsDidBecomeUnavailable = "com.blocksort.adsDidBecomeUnavailable"
 	static let didResetProgress = "com.blocksort.didResetProgress"
+	static let errorWhilePurchasing = "com.blocksort.failedpuchasing"
 }
 
 final class StoreObserver: NSObject, SKPaymentTransactionObserver {
@@ -35,6 +36,10 @@ final class StoreObserver: NSObject, SKPaymentTransactionObserver {
 				finishedCallback?()
 				SKPaymentQueue.default().finishTransaction(transaction)
 			case .failed:
+				NotificationCenter.default.post(
+					name: Notification.Name("com.blocksort.failedpuchasing"),
+					object: nil
+				)
 				SKPaymentQueue.default().finishTransaction(transaction)
 			case .restored:
 				NotificationCenter.default.post(

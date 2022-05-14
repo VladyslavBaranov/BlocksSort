@@ -47,8 +47,17 @@ final class SettingsViewController: UIViewController {
 			view.layoutIfNeeded()
 		} else {
 			validate()
+			adsOnButton.isHidden = true
+			restoreButton.isHidden = true
+			removeAdsButton.isHidden = true
 			StoreObserver.shared.finishedCallback = finishedCallback
 		}
+		
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(failedPurchasing),
+			name: Notification.Name("com.blocksort.failedpuchasing"),
+			object: nil)
 	}
 	
 	func setupVisualEffectView() {
@@ -168,6 +177,13 @@ final class SettingsViewController: UIViewController {
 		])
 	}
 	
+	@objc func failedPurchasing() {
+		let controller = UIAlertController(
+			title: "Warning", message: "Could not purchase this item. Check your internet connection", preferredStyle: .alert)
+		controller.addAction(.init(title: "Cancel", style: .cancel, handler: nil))
+		present(controller, animated: true, completion: nil)
+	}
+	
 	@objc func toggleAds() {
 		guard SKPaymentQueue.canMakePayments() else { return }
 		guard let firstProduct = products.first else { return }
@@ -227,6 +243,7 @@ extension SettingsViewController {
 		request.start()
 	}
 	func buyNoAds(product: SKProduct) {
+		guard SKPaymentQueue.canMakePayments() else { return }
 		let payment = SKPayment(product: product)
 		SKPaymentQueue.default().add(payment)
 	}
@@ -254,12 +271,17 @@ extension SettingsViewController: SKProductsRequestDelegate {
 					priceLabel.text = "$ \(firstProduct.price)"
 					activityControl.stopAnimating()
 					priceLabel.isHidden = false
+					restoreButton.isHidden = false
+					adsOnButton.isHidden = false
+					removeAdsButton.isHidden = false
 				}
 			}
-//			for product in products {
-//			}
 		}
 //		for invalidIdentifier in response.invalidProductIdentifiers {
 //		}
+	}
+	
+	func request(_ request: SKRequest, didFailWithError error: Error) {
+		print("FAILED")
 	}
 }

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07858BFD282A8309006F6D2D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07858BFC282A8309006F6D2D /* StoreKit.framework */; };
 		0793D19928089E3C00B4CDDB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D19828089E3C00B4CDDB /* AppState.swift */; };
 		0793D19B2809AF9400B4CDDB /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D19A2809AF9400B4CDDB /* Array+Extension.swift */; };
 		0793D19D2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D19C2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift */; };
 		0793D1A42809F3F100B4CDDB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D1A32809F3F100B4CDDB /* SettingsViewController.swift */; };
 		0793D1A6280AC3FC00B4CDDB /* StoreObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D1A5280AC3FC00B4CDDB /* StoreObserver.swift */; };
-		0793D1A8280AC9F400B4CDDB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0793D1A7280AC9F400B4CDDB /* StoreKit.framework */; };
 		0793D1AB280B21F100B4CDDB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0793D1AD280B21F100B4CDDB /* Localizable.strings */; };
 		0793D1B0280B229E00B4CDDB /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793D1AF280B229E00B4CDDB /* Localization.swift */; };
 		0793D1BE280B323F00B4CDDB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0793D1BD280B323F00B4CDDB /* GameKit.framework */; };
@@ -53,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07858BFC282A8309006F6D2D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0793D19828089E3C00B4CDDB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		0793D19A2809AF9400B4CDDB /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		0793D19C2809BF5D00B4CDDB /* BlockColumnPoolConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockColumnPoolConfiguration.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		0793D19F2809E9D800B4CDDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0793D1A32809F3F100B4CDDB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0793D1A5280AC3FC00B4CDDB /* StoreObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreObserver.swift; sourceTree = "<group>"; };
-		0793D1A7280AC9F400B4CDDB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0793D1AC280B21F100B4CDDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0793D1AE280B21FD00B4CDDB /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0793D1AF280B229E00B4CDDB /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
@@ -110,9 +110,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07858BFD282A8309006F6D2D /* StoreKit.framework in Frameworks */,
 				0793D1BE280B323F00B4CDDB /* GameKit.framework in Frameworks */,
 				F4938422FAAB99B916A550C8 /* Pods_BlockSort.framework in Frameworks */,
-				0793D1A8280AC9F400B4CDDB /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,8 +236,8 @@
 		48E522235AC3DEE975CB844D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07858BFC282A8309006F6D2D /* StoreKit.framework */,
 				0793D1BD280B323F00B4CDDB /* GameKit.framework */,
-				0793D1A7280AC9F400B4CDDB /* StoreKit.framework */,
 				0C1A132E14A67E6C20483D80 /* Pods_BlockSort.framework */,
 				4AD5A2FBF20E94F7BE0C53A7 /* Pods_BlockSort_BlockSortUITests.framework */,
 				78B054C5C6C0103C6629AD7A /* Pods_BlockSortTests.framework */,
@@ -717,7 +717,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BlockSort/BlockSort.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4D5NR7NN6K;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BlockSort/Application/Info.plist;
@@ -750,7 +750,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BlockSort/BlockSort.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4D5NR7NN6K;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BlockSort/Application/Info.plist;

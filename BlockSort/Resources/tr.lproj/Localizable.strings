@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  BlockSort
+
+  Created by VladyslavMac on 16.04.2022.
+  
+*/
+
+"main_level" = "Niveau";
+"main_watch_ad" = "L'annonce ile ilgili";
+
+"settings_on" = "Aktif";
+"settings_off" = "Désactivé";
+"settings_restore" = "Restoran";
+"settings_ads" = "Duyurular";
+"settings_sound" = "Oğlum";
+"settings_share" = "Partager avec des amis";
+"settings_reset" = "Yeniden başlatıcı le niveau";
+"settings_warning" = "Dikkat : ilerlemeyi duyurun";
+"settings_pricing" = "Supprimer les publicités et les sonsuz şarjlar";
+"settings_confirm" = "Onaylayıcı";
+

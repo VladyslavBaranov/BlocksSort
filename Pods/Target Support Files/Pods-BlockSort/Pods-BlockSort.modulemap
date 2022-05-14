@@ -1,0 +1,6 @@
+framework module Pods_BlockSort {
+  umbrella header "Pods-BlockSort-umbrella.h"
+
+  export *
+  module * { export * }
+}
